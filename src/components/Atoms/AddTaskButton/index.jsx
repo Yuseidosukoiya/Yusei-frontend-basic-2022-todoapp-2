@@ -26,6 +26,7 @@ const StyledButton = styled.button`
   gap: 10px;
   border-radius: 12px;
   background-color: ${COLOR.GREEN_TRANSPARENT};
+  transition: background-color 0.3s ease;
 
   :hover {
     background-color: ${COLOR.GREEN_TRANSLUCENT};
