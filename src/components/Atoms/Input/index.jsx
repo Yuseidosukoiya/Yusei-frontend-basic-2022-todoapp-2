@@ -11,12 +11,14 @@ export const Input = ({ onEditComplete, defaultValue }) => {
   }, []);
 
   const handleBlur = () => {
-    return onEditComplete;
+    const inputValue = inputRef.current.value;
+    onEditComplete(inputValue);
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
-      return onEditComplete;
+      const inputValue = inputRef.current.value;
+      onEditComplete(inputValue);
     }
   };
 
