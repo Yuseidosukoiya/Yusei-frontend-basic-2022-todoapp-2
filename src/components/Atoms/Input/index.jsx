@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 
 import COLOR from "../../../variables/color";
@@ -25,7 +25,7 @@ export const Input = () => {
   return (
     <StyledInput
       ref={inputRef}
-      onblur={handleBlur}
+      onBlur={handleBlur}
       onKeyDown={handleKeyDown}
       defaultValue=""
     />
