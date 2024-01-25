@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
+import FONT_FAMILY from "../../../variables/font_family";
 
 export const Input = ({ onEditComplete, defaultValue = "" }) => {
   const inputRef = useRef(null);
@@ -39,6 +40,7 @@ const StyledInput = styled.input`
   border-radius: 2px;
   padding: 0px 4px;
   ${TEXT.S}
+  font-family: ${FONT_FAMILY.NOTO_SANS};
   color: ${COLOR.LIGHT_GRAY};
   background-color: ${COLOR.BLACK};
 `;
