@@ -19,16 +19,13 @@ export const ToDoCard = () => {
   };
 
   const onTaskNameChange = (value, index) => {
+    const modifiedTaskList = [...taskList];
     if (value === "") {
-      const modifiedTaskList = [...taskList];
       modifiedTaskList.splice(index, 1);
-      setTaskList(modifiedTaskList);
     } else {
-      const modifiedTaskList = [...taskList];
-      modifiedTaskList[index.name] = value;
-      setTaskList(modifiedTaskList);
-      /* 更新　*/
+      modifiedTaskList[index].name = value;
     }
+    setTaskList(modifiedTaskList);
   };
 
   return (
