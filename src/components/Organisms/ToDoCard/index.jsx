@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 import COLOR from "../../../variables/color";
+import BREAKPOINT from "../../../variables/breakpoint";
 import { AddTaskButton } from "../../Atoms/AddTaskButton/index";
 import { Tasks } from "../../Molecules/Tasks/index";
 
@@ -51,7 +52,13 @@ export const ToDoCard = () => {
 const StyledWrapper = styled.div`
   padding: 20px;
   background-color: ${COLOR.LIGHT_BLACK};
+  width: 100%;
+  max-width: 460px;
+  @media (max-width: ${BREAKPOINT.MEDIUM}) {
+    max-width: none;
+  }
 `;
+
 const StyledTaskList = styled.div``;
 
 const StyledTask = styled.div`
