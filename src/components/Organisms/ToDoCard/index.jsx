@@ -38,8 +38,8 @@ export const ToDoCard = () => {
               key={index}
               taskName={task.name}
               defaultIsEditing={task.initializing}
-              onTaskComplete={onTaskComplete}
-              onTaskNameChange={onTaskNameChange}
+              onTaskComplete={() => onTaskComplete(index)}
+              onTaskNameChange={(value) => onTaskNameChange(value, index)}
             />
           </StyledTask>
         ))}
