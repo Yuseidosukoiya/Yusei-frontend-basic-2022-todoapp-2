@@ -6,7 +6,7 @@ import BREAKPOINT from "../../../variables/breakpoint";
 import { ToDoCard } from "../../Organisms/ToDoCard/index";
 import { Title } from "../../Atoms/Title/index";
 
-export const Mainpage = () => {
+export const MainPage = () => {
   return (
     <StyledWrapper>
       <Title />

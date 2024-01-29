@@ -1,5 +1,5 @@
-import { Mainpage } from "./index";
+import { MainPage } from "./index";
 
-export default { component: Mainpage };
+export default { component: MainPage };
 
 export const Default = {};
