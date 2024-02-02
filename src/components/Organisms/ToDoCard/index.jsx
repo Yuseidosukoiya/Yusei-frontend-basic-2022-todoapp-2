@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import COLOR from "../../../variables/color";
@@ -8,17 +8,6 @@ import { Tasks } from "../../Molecules/Tasks/index";
 
 export const ToDoCard = () => {
   const [taskList, setTaskList] = useState([]);
-
-  useEffect(() => {
-    const data = localStorage.getItem("taskList");
-    if (data) {
-      setTaskList(JSON.parse(data));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("taskList", JSON.stringify(taskList));
-  }, [taskList]);
 
   const onAddTaskButtonClick = () => {
     setTaskList([...taskList, { name: "", initializing: true }]);
