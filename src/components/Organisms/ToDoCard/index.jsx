@@ -36,6 +36,7 @@ export const ToDoCard = () => {
       modifiedTaskList.splice(index, 1);
     } else {
       modifiedTaskList[index].name = value;
+      modifiedTaskList[index].initializing = false;
     }
     setTaskList(modifiedTaskList);
   };
