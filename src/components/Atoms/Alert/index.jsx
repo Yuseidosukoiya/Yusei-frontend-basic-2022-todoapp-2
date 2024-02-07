@@ -25,7 +25,11 @@ const StyledText = styled.div`
   color: ${COLOR.WHITE};
   ${TEXT.S};
   font-family: ${FONT_FAMILY.NOTO_SANS};
-  opacity: ${(isActive) => (isActive ? 1 : 0)};
+  opacity: 0;
+  transform: translateX(-50%) translateY(-40px);
+  ${(props) =>
+    props.isActive &&
+    `{opacity:1 ; transform: translateX(-50%) translateY(0)}`};
   transition: 0.5s ease;
   @media (max-width: ${BREAKPOINT.MEDIUM}) {
     top: 40px;
