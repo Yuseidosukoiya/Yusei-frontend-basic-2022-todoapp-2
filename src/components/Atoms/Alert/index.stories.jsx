@@ -2,4 +2,9 @@ import { Alert } from "./index";
 
 export default { component: Alert };
 
-export const Default = {};
+export const Default = {
+  args: {
+    isActive: true,
+    errorText: "text",
+  },
+};
