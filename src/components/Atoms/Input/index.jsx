@@ -1,25 +1,35 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
+import { useAlertHandlerContext } from "../../../contexts/alert_handler";
 
 import COLOR from "../../../variables/color";
 import TEXT from "../../../variables/texts";
 import FONT_FAMILY from "../../../variables/font_family";
 
 export const Input = ({ onEditComplete, defaultValue = "" }) => {
+  const AlertHandlerContext = useAlertHandlerContext();
   const inputRef = useRef(null);
   useEffect(() => {
     inputRef.current.focus();
   }, []);
 
+  const setAlert = () => {
+    if (inputRef.current.value === null) {
+      return AlertHandlerContext.setAlert("タスクの名前が設定されていません。");
+    }
+  };
+
   const handleBlur = () => {
     const inputValue = inputRef.current.value;
     onEditComplete(inputValue);
+    setAlert();
   };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       const inputValue = inputRef.current.value;
       onEditComplete(inputValue);
+      setAlert();
     }
   };
 
