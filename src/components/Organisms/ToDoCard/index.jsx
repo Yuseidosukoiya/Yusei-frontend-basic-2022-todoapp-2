@@ -35,13 +35,16 @@ export const ToDoCard = () => {
   const onTaskNameChange = (value, index) => {
     const modifiedTaskList = [...taskList];
     if (value === "") {
-      modifiedTaskList.splice(index, 1);
+      const filteredOnTaskNameChange = taskList.filter(
+        (_, idx) => idx !== index
+      );
+      setTaskList(filteredOnTaskNameChange);
       AlertHandlerContext.setAlert("タスクの名前が設定されていません。");
     } else {
       modifiedTaskList[index].name = value;
       modifiedTaskList[index].initializing = false;
+      setTaskList(modifiedTaskList);
     }
-    setTaskList(modifiedTaskList);
   };
 
   return (
