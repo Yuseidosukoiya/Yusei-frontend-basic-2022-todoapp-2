@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { MainPage } from "./components/Pages/MainPage/index";
 import "./style.css";
 import { AlertHandlerProvider } from "./contexts/alert_handler";
-import { AlertManager } from "./components/Organisms/AlertManager";
+import { AlertManager } from "./components/Organisms/AlertManager/index";
 
 ReactDOM.render(
   <AlertHandlerProvider>
